@@ -1,4 +1,7 @@
 language: ruby
 env: RACK_ENV=development
+before_script:
+- sudo apt-get update -q
+- sudo apt-get install g++ libcppunit-dev
 rvm:
 - 2.0.0
