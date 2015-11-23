@@ -8,7 +8,7 @@
 # Before install
 
 ```
-sudo apt-get install libcppunit-dev
+sudo apt-get install g++ libcppunit-dev
 ```
 
 # Run the server

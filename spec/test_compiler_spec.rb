@@ -24,7 +24,6 @@ EOT
 
 class Bar {};
 class Foo {};
-
 class MumukiTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( MumukiTest );
     CPPUNIT_TEST( testTrueIsTrue );
@@ -35,6 +34,7 @@ class MumukiTest : public CppUnit::TestFixture {
     CPPUNIT_ASSERT( true == true  );
   }
 };
+
 
 int main( int argc, char **argv)
 {

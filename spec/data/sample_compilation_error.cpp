@@ -4,26 +4,14 @@
 class Foo {
   public:
 
-  int foo() {
-    return 4;
-  }
 };
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
     CPPUNIT_TEST( testFoo );
-    CPPUNIT_TEST( testBar );
-
   CPPUNIT_TEST_SUITE_END();
 
   void testFoo()
-  {
-    Foo* foo = new Foo();
-    CPPUNIT_ASSERT( foo->foo() == 4 );
-    delete foo;
-  }
-
-  void testBar()
   {
     Foo* foo = new Foo();
     CPPUNIT_ASSERT( foo->foo() == 5 );

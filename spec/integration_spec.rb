@@ -60,6 +60,6 @@ class Foo {
 };}, expectations: [])
 
     expect(response[:status]).to eq(:failed)
-    expect(response[:result]).to include('There was 1 failure')
+    expect(response[:result]).to include('Run:  1   Failures: 1   Errors: 0')
   end
 end

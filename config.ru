@@ -1,3 +1,3 @@
-require_relative 'lib/rspec_server'
+require_relative 'lib/cppunit_server'
 
 run Mumukit::TestServerApp
