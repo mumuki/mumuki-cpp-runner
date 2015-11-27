@@ -8,7 +8,7 @@ end
 
 
 describe TestRunner do
-  let(:runner) { TestRunner.new('gpp_command' => 'g++') }
+  let(:runner) { TestRunner.new('runcppunit_command' => 'runcppunit') }
   let(:file) { File.new('spec/data/sample.cpp') }
   let(:file_multi) { File.new('spec/data/sample_multi.cpp') }
   let(:file_failed) { File.new('spec/data/sample_failed.cpp') }
@@ -32,7 +32,7 @@ describe TestRunner do
       let(:results) { runner.run_compilation!(file_compile_error) }
 
       it { expect(results[1]).to eq :errored }
-      it { expect(results[0]).to include 'error: ‘class Foo’ has no member named ‘foo’' }
+      it { expect(results[0]).to include "error: 'class Foo' has no member named 'foo'" }
     end
 
 
