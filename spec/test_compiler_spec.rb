@@ -1,6 +1,6 @@
 require_relative './spec_helper'
 
-describe TestCompiler do
+describe CppTestHook do
   true_test = <<CPP
 class MumukiTest : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE( MumukiTest );
@@ -35,7 +35,6 @@ class MumukiTest : public CppUnit::TestFixture {
   }
 };
 
-
 int main( int argc, char **argv)
 {
   CppUnit::TextUi::TestRunner runner;
@@ -46,9 +45,9 @@ int main( int argc, char **argv)
 EOT
 
   describe '#compile' do
-    let(:compiler) { TestCompiler.new(nil) }
+    let(:compiler) { CppTestHook.new(nil) }
     let(:request) { OpenStruct.new(test: true_test, extra: 'class Bar {};', content: 'class Foo {};') }
-    it { expect(compiler.compile(request)).to eq(compiled_test_submission) }
+    it { expect(compiler.compile_file_content(request)).to eq(compiled_test_submission) }
   end
 
 end

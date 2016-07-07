@@ -1,3 +1,3 @@
-require_relative 'lib/cppunit_server'
+require_relative 'lib/cpp_server'
 
-run Mumukit::TestServerApp
+run Mumukit::Server::App
