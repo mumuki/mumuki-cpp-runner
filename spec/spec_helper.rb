@@ -1,1 +1,6 @@
-require_relative '../lib/cppunit_server'
+require_relative '../lib/cpp_server'
+
+class File
+  def unlink
+  end
+end
