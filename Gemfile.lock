@@ -20,10 +20,10 @@ GIT
 
 GIT
   remote: git://github.com/mumuki/mumukit.git
-  revision: e5a620b548579cf827b0de7dd01fae8985e43a6e
-  tag: v2.0.0
+  revision: bc790bed51364d46894ed98592960bf4866ec508
+  tag: v2.1.1
   specs:
-    mumukit (2.0.0)
+    mumukit (2.1.0)
       activesupport
       docker-api (~> 1.22.2)
       excon (= 0.45.4)
