@@ -9,3 +9,11 @@ services:
 - docker
 before_install:
 - docker pull mumuki/mumuki-cppunit-worker
+deploy:
+  provider: rubygems
+  api_key:
+    secure: fAMsQG7oRLj1QjMjKhFkzPjyH2NQwcu1GmgeRQx9kWsVU3KblRnw32WR22/9ROBUtCI43DsfSFswu8Z8Cn7BLIf9eDh3MMZPJtM2qiRxlFqWH7qMG4QTRrkuR9t1ItA7FJBsertK4ZRn4hFw1T/5K1lA0aq+pUs3iCYvKm83GYvmEjV4/JQmK+WoykVuGJeZEaiNEOZ4oO/xNCXWRx9AZqlPP2wLt5xJfJftX1QyMeyNDiLJBPNZLnWJgs0uHp3p82r2RZSeAwncqXpBqvCo6QqNTrHy3dMhz7d3iMWN0v+AVeFIN9ROf8vdZrsXbgmbeIMycXoNi8CLY9Fze/6Vwt7GYpgRGGTIFWXIXIavNwwbfTv9B1BFu/18SePVVznMDyW2xfSN3A8CupzxW2qfrvqf5T4xnIZUrRRdLiA77gqP27ASRq0gBvk/6Ah+cBcUW24NHMkyMJ8+SiVSfh1pCOgu3p8lp4okIb2DdFUfLSkuysaMal5ooFujARnIH2rZupEKvCJaJkkeVa4phue9bDEE5lwpNa3aQQfnp5A9DOcDvlpOG+Q9QxlBU7gPuOURcKQ4JdIWdRqgVs6qnNN16Ne1l7hNXeIdpGhgR8eotmb7nJFVqPVDtm0HGwNtVoO3DCE6rOKErj0LxuGy+uVQtXU0kgvV8YbHs+W5KNvYim8=
+  gem: mumuki-cpp-runner
+  on:
+    tags: true
+    repo: mumuki/mumuki-cpp-runner
