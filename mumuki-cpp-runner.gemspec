@@ -1,10 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'version_hook'
 
 Gem::Specification.new do |spec|
   spec.name          = 'mumuki-cpp-runner'
-  spec.version       = '1.0.0'
+  spec.version       =  CppVersionHook::VERSION
   spec.authors       = ['Franco Leonardo Bulgarelli']
   spec.email         = ['franco@mumuki.org']
   spec.summary       = 'Cpp Runner for Mumuki'
