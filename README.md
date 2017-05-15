@@ -1,9 +1,9 @@
-[![Stories in Ready](https://badge.waffle.io/mumuki/mumuki-cppunit-server.png?label=ready&title=Ready)](https://waffle.io/mumuki/mumuki-cppunit-server)
-[![Build Status](https://travis-ci.org/mumuki/mumuki-cppunit-server.svg?branch=master)](https://travis-ci.org/mumuki/mumuki-cppunit-server)
-[![Code Climate](https://codeclimate.com/github/mumuki/mumuki-cppunit-server/badges/gpa.svg)](https://codeclimate.com/github/mumuki/mumuki-cppunit-server)
-[![Test Coverage](https://codeclimate.com/github/mumuki/mumuki-cppunit-server/badges/coverage.svg)](https://codeclimate.com/github/mumuki/mumuki-cppunit-server)
+[![Stories in Ready](https://badge.waffle.io/mumuki/mumuki-cpp-runner.png?label=ready&title=Ready)](https://waffle.io/mumuki/mumuki-cpp-runner)
+[![Build Status](https://travis-ci.org/mumuki/mumuki-cpp-runner.svg?branch=master)](https://travis-ci.org/mumuki/mumuki-cpp-runner)
+[![Code Climate](https://codeclimate.com/github/mumuki/mumuki-cpp-runner/badges/gpa.svg)](https://codeclimate.com/github/mumuki/mumuki-cpp-runner)
+[![Test Coverage](https://codeclimate.com/github/mumuki/mumuki-cpp-runner/badges/coverage.svg)](https://codeclimate.com/github/mumuki/mumuki-cpp-runner)
 
-> mumuki-cppunit-server
+> mumuki-cppunit-runner
 
 # Before install
 
