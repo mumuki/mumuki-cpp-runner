@@ -2,7 +2,7 @@ class CppMetadataHook < Mumukit::Hook
   def metadata
     {language: {
         name: 'c++',
-        icon: {type: 'devicon', name: 'c'},
+        icon: {type: 'devicon', name: 'cpp'},
         extension: 'cpp',
         ace_mode: 'c_cpp'
     },
