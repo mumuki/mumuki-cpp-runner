@@ -71,7 +71,13 @@ describe CppFeedbackHook do
   context 'expected_comma_before_token' do
     let(:request) {req('void foo(int a.b) {}', '')}
 
-    it {expect(feedback).to eq('* El nombre de uno de los parámetros está mal. Fijate por acá `...void foo(int a.b) {}...` que no pueden tener puntos en el nombre.')}
+    it {expect(feedback).to eq('* El nombre de uno de los parámetros está mal. Fijate por acá `void foo(int a.b) {}` que no pueden tener puntos en el nombre.')}
+  end
+
+  context 'expected_initializer_before_token' do
+    let(:request) {req('int a.b;', '')}
+
+    it {expect(feedback).to eq('* El nombre de una de las variables está mal. Fijate por acá `int a.b;` que no pueden tener puntos en el nombre.')}
   end
 
 end

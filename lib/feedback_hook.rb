@@ -43,5 +43,11 @@ class CppFeedbackHook < Mumukit::Hook
       end
     end
 
+    def explain_expected_initializer_before_token(_, result)
+      (/error: expected initializer before '.' token\n\s(.*)/.match result).try do |it|
+        {near: it[1]}
+      end
+    end
+
   end
 end
