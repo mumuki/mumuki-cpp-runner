@@ -1,0 +1,2 @@
+en:
+  has_no_member_named: 'Parece que no existe el campo `%{target}` en el tipo `%{type}`. Fijate que el nombre esté bien escrito.'

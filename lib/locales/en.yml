@@ -1,0 +1,2 @@
+en:
+  has_no_member_named: 'Error: `%{near}` has no member named `%{target}`'
