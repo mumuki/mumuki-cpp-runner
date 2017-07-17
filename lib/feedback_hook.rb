@@ -12,5 +12,11 @@ class CppFeedbackHook < Mumukit::Hook
         {type: it[1], target: it[2]}
       end
     end
+
+    def explain_was_not_declared_in_this_scope(_, result)
+      (/error: '(.*)' was not declared in this scope/.match result).try do |it|
+        {target: it[1]}
+      end
+    end
   end
 end

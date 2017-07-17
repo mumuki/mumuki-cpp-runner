@@ -1,2 +1,3 @@
 en:
   has_no_member_named: 'Parece que no existe el campo `%{target}` en el tipo `%{type}`. Fijate que el nombre esté bien escrito.'
+  was_not_declared_in_this_scope: 'El identificador `%{target}` no existe. Fijate si está bien escrito o si estás usando la variable correcta.'
