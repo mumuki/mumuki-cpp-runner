@@ -62,4 +62,10 @@ describe CppFeedbackHook do
     it {expect(feedback).to eq('* Parece que no definiste el tipo `Registro variable`. Fijate que el nombre esté bien escrito.')}
   end
 
+  context 'invalid_suffix' do
+    let(:request) {req('void 2foo() {}', '')}
+
+    it {expect(feedback).to eq('* Parece que intentaste definir un identificador `foo` pero lo empezaste con un número. Recordá que los nombres de los identificadores deben comenzar con una **letra**, **$** o **_** (guión bajo).')}
+  end
+
 end

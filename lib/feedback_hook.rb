@@ -31,5 +31,11 @@ class CppFeedbackHook < Mumukit::Hook
       end
     end
 
+    def explain_invalid_suffix(_, result)
+      (/error: invalid suffix "(.*)" on integer constant/.match result).try do |it|
+        {suffix: it[1]}
+      end
+    end
+
   end
 end
