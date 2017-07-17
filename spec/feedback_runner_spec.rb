@@ -55,4 +55,11 @@ describe CppFeedbackHook do
     it {expect(feedback).to eq('* No hay un tipo de datos con el nombre `doble`. Fijate si está bien escrito.')}
   end
 
+
+  context 'has_incomplete_type_and_cannot_be_defined' do
+    let(:request) {req('struct Registro; Registro variable;', '')}
+
+    it {expect(feedback).to eq('* Parece que no definiste el tipo `Registro variable`. Fijate que el nombre esté bien escrito.')}
+  end
+
 end

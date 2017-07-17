@@ -2,3 +2,4 @@ en:
   has_no_member_named: 'Parece que no existe el campo `%{target}` en el tipo `%{type}`. Fijate que el nombre esté bien escrito.'
   was_not_declared_in_this_scope: 'El identificador `%{target}` no existe. Fijate si está bien escrito o si estás usando la variable correcta.'
   does_not_a_type: 'No hay un tipo de datos con el nombre `%{type}`. Fijate si está bien escrito.'
+  has_incomplete_type_and_cannot_be_defined: 'Parece que no definiste el tipo `%{type}`. Fijate que el nombre esté bien escrito.'

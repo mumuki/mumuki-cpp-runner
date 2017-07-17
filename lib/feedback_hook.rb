@@ -24,5 +24,12 @@ class CppFeedbackHook < Mumukit::Hook
         {type: it[1]}
       end
     end
+
+    def explain_has_incomplete_type_and_cannot_be_defined(_, result)
+      (/error: aggregate '(.*)' has incomplete type and cannot be defined/.match result).try do |it|
+        {type: it[1]}
+      end
+    end
+
   end
 end
