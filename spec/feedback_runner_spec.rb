@@ -68,4 +68,10 @@ describe CppFeedbackHook do
     it {expect(feedback).to eq('* Parece que intentaste definir un identificador `foo` pero lo empezaste con un número. Recordá que los nombres de los identificadores deben comenzar con una **letra**, **$** o **_** (guión bajo).')}
   end
 
+  context 'expected_comma_before_token' do
+    let(:request) {req('void foo(int a.b) {}', '')}
+
+    it {expect(feedback).to eq('* El nombre de uno de los parámetros está mal. Fijate por acá `...void foo(int a.b) {}...` que no pueden tener puntos en el nombre.')}
+  end
+
 end

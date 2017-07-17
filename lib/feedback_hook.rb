@@ -37,5 +37,11 @@ class CppFeedbackHook < Mumukit::Hook
       end
     end
 
+    def explain_expected_comma_before_token(_, result)
+      (/error: expected ',' or '\.\.\.' before '\.' token\n\s(.*)/.match result).try do |it|
+        {near: it[1]}
+      end
+    end
+
   end
 end
