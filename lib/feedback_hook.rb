@@ -18,5 +18,11 @@ class CppFeedbackHook < Mumukit::Hook
         {target: it[1]}
       end
     end
+
+    def explain_does_not_a_type(_, result)
+      (/error: '(.*)' does not name a type/.match result).try do |it|
+        {type: it[1]}
+      end
+    end
   end
 end

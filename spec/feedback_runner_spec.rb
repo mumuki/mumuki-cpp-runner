@@ -49,5 +49,10 @@ describe CppFeedbackHook do
     it {expect(feedback).to eq('* El identificador `foo` no existe. Fijate si está bien escrito o si estás usando la variable correcta.')}
   end
 
+  context 'does_not_a_type' do
+    let(:request) {req('doble a = 0.0;', '')}
+
+    it {expect(feedback).to eq('* No hay un tipo de datos con el nombre `doble`. Fijate si está bien escrito.')}
+  end
 
 end
