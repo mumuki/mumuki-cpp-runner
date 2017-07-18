@@ -84,5 +84,11 @@ class CppFeedbackHook < Mumukit::Hook
       end
     end
 
+    def explain_expected_initializer_before(_, result)
+      (/error: expected initializer before '(.*)'#{near_regex}/.match result).try do |it|
+        {near: it[2]}
+      end
+    end
+
   end
 end
