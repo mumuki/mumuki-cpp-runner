@@ -60,6 +60,16 @@ describe CppFeedbackHook do
     it {expect(feedback).to eq('* El nombre de una de las variables está mal. Revisá en esta parte `int a.b;` que no tenga puntos en el nombre.')}
   end
 
+  context 'too_many_arguments_to_function' do
+    let(:request) {req(%q{
+      void foo() {
+        foo(1);
+      }
+    })}
+
+    it {expect(feedback).to eq('* Parece que invocaste a la función `void foo()` con más argumentos de los que lleva. Revisá en esta parte `foo(1);` la llamada a la función.')}
+  end
+
   context 'when same error occurs more than once  times in the same line' do
     let(:request) {req(%q{
       struct Foo;

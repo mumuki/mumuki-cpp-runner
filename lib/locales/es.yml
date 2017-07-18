@@ -6,3 +6,4 @@ en:
   invalid_suffix: 'Parece que intentaste definir un identificador `%{suffix}` no válido. Revisá en esta parte `%{near}` si lo empezaste con un número. Recordá que los nombres de los identificadores deben comenzar con una **letra**, **$** o **_** (guión bajo).'
   expected_comma_before_token: 'El nombre de uno de los parámetros está mal. Revisá en esta parte `%{near}` que no tenga puntos en el nombre.'
   expected_initializer_before_token: 'El nombre de una de las variables está mal. Revisá en esta parte `%{near}` que no tenga puntos en el nombre.'
+  too_many_arguments_to_function: 'Parece que invocaste a la función `%{target}` con más argumentos de los que lleva. Revisá en esta parte `%{near}` la llamada a la función.'
