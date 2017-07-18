@@ -90,5 +90,11 @@ class CppFeedbackHook < Mumukit::Hook
       end
     end
 
+    def explain_expected_unqualified_id(_, result)
+      (/error: expected unqualified-id before '(.*)' token#{near_regex}/.match result).try do |it|
+        {token: it[1], near: it[2]}
+      end
+    end
+
   end
 end

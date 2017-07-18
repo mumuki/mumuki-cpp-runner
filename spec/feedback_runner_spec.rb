@@ -123,6 +123,12 @@ describe CppFeedbackHook do
     it {expect(feedback).to include('* Probablemente falte un `;` después de declarar una variable en la línea anterior a `bar();`.')}
   end
 
+  context 'expected_unqualified_id' do
+    let(:request) {req('int double = 1;')}
+
+    it {expect(feedback).to include('* El identificador que se encuentra entes que `=` no es válido. Revisá en esta parte `int double = 1;`.')}
+  end
+
   context 'when same error occurs more than once  times in the same line' do
     let(:request) {req(%q{
       struct Foo;
