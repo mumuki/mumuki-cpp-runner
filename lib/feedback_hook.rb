@@ -60,5 +60,11 @@ class CppFeedbackHook < Mumukit::Hook
       end
     end
 
+    def explain_too_few_arguments_to_function(_, result)
+      (/error: too few arguments to function '(.*)'#{near_regex}/.match result).try do |it|
+        {target: it[1], near: it[2]}
+      end
+    end
+
   end
 end
