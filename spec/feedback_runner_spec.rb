@@ -80,6 +80,18 @@ describe CppFeedbackHook do
     it {expect(feedback).to eq('* Parece que invocaste a la función `void foo(int)` con menos argumentos de los que lleva. Revisá en esta parte `foo();` la llamada a la función.')}
   end
 
+  context 'call_of_overloaded_is_ambiguous' do
+    let(:request) {req(%q{
+      void foo(int a) {}
+      void foo(double a) {}
+      void bar() {
+        foo(1L);
+      }
+    })}
+
+    it {expect(feedback).to eq('* Uno o más argumentos están mal al invocar a `foo(long int)`. Revisá en esta parte `foo(1L);` con qué argumentos la estas llamando.')}
+  end
+
   context 'when same error occurs more than once  times in the same line' do
     let(:request) {req(%q{
       struct Foo;

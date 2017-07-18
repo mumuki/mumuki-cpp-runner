@@ -8,3 +8,4 @@ en:
   expected_initializer_before_token: 'El nombre de una de las variables está mal. Revisá en esta parte `%{near}` que no tenga puntos en el nombre.'
   too_many_arguments_to_function: 'Parece que invocaste a la función `%{target}` con más argumentos de los que lleva. Revisá en esta parte `%{near}` la llamada a la función.'
   too_few_arguments_to_function: 'Parece que invocaste a la función `%{target}` con menos argumentos de los que lleva. Revisá en esta parte `%{near}` la llamada a la función.'
+  call_of_overloaded_is_ambiguous: 'Uno o más argumentos están mal al invocar a `%{target}`. Revisá en esta parte `%{near}` con qué argumentos la estas llamando.'

@@ -66,5 +66,11 @@ class CppFeedbackHook < Mumukit::Hook
       end
     end
 
+    def explain_call_of_overloaded_is_ambiguous(_, result)
+      (/error: call of overloaded '(.*)' is ambiguous#{near_regex}/.match result).try do |it|
+        {target: it[1], near: it[2]}
+      end
+    end
+
   end
 end
