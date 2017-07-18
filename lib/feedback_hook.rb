@@ -3,7 +3,7 @@ class CppFeedbackHook < Mumukit::Hook
     content = request.content
     test_results = results.test_results[0]
 
-    CppExplainer.new.explain(content, test_results)
+    CppExplainer.new.explain(content, test_results) if test_results.is_a? String
   end
 
   class CppExplainer < Mumukit::Explainer
