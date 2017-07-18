@@ -103,6 +103,17 @@ describe CppFeedbackHook do
     it {expect(feedback).to eq('* Se esperaba un valor de tipo `const char*` pero se recibió uno de `int` en esta línea `foo("Bar");`.')}
   end
 
+
+  context 'expected_after_struct_definition' do
+    let(:request) {req(%q{
+      struct foo {
+        int bar;
+      }
+    })}
+
+    it {expect(feedback).to eq('* Falta el `;` después de definir el registro.')}
+  end
+
   context 'when same error occurs more than once  times in the same line' do
     let(:request) {req(%q{
       struct Foo;

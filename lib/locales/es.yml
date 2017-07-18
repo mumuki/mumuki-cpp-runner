@@ -10,3 +10,4 @@ en:
   too_few_arguments_to_function: 'Parece que invocaste a la función `%{target}` con menos argumentos de los que lleva. Revisá en esta parte `%{near}` la llamada a la función.'
   call_of_overloaded_is_ambiguous: 'Uno o más argumentos están mal al invocar a `%{target}`. Revisá en esta parte `%{near}` con qué argumentos la estas llamando.'
   invalid_conversion_from_to: 'Se esperaba un valor de tipo `%{expected}` pero se recibió uno de `%{actual}` en esta línea `%{near}`.'
+  expected_after_struct_definition: 'Falta el `;` después de definir el registro.'

@@ -78,5 +78,11 @@ class CppFeedbackHook < Mumukit::Hook
       end
     end
 
+    def explain_expected_after_struct_definition(_, result)
+      (/error: expected ';' after struct definition#{near_regex}/.match result).try do |it|
+        {near: it[1]}
+      end
+    end
+
   end
 end
