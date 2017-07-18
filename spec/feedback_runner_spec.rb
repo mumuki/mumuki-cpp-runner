@@ -21,7 +21,7 @@ describe CppFeedbackHook do
       }
     })}
 
-    it {expect(feedback).to include('* Parece que no existe el campo `foo` en el tipo `class Foo`. Revisá en esta parte `foo->foo();` que el campo exista o el nombre esté bien escrito.')}
+    it {expect(feedback).to include('* Parece que no existe el campo, atributo o método `foo` en `class Foo`. Revisá en esta parte `foo->foo();` que exista o el nombre esté bien escrito.')}
   end
 
   context 'was_not_declared_in_this_scope' do
@@ -33,7 +33,7 @@ describe CppFeedbackHook do
   context 'does_not_a_type' do
     let(:request) {req('doble a = 0.0;')}
 
-    it {expect(feedback).to include('* No hay un tipo de datos con el nombre `doble`. Revisá en esta parte `doble a = 0.0;` si está bien escrito.')}
+    it {expect(feedback).to include('* No hay un tipo de dato con el nombre `doble`. Revisá en esta parte `doble a = 0.0;` si está bien escrito.')}
   end
 
   context 'has_incomplete_type_and_cannot_be_defined' do
