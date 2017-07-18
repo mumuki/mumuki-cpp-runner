@@ -92,6 +92,17 @@ describe CppFeedbackHook do
     it {expect(feedback).to eq('* Uno o más argumentos están mal al invocar a `foo(long int)`. Revisá en esta parte `foo(1L);` con qué argumentos la estas llamando.')}
   end
 
+  context 'invalid_conversion_from_to' do
+    let(:request) {req(%q{
+      void foo(int a) {}
+      void bar() {
+          foo("Bar");
+      }
+    })}
+
+    it {expect(feedback).to eq('* Se esperaba un valor de tipo `const char*` pero se recibió uno de `int` en esta línea `foo("Bar");`.')}
+  end
+
   context 'when same error occurs more than once  times in the same line' do
     let(:request) {req(%q{
       struct Foo;

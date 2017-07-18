@@ -9,7 +9,7 @@ class CppFeedbackHook < Mumukit::Hook
   class CppExplainer < Mumukit::Explainer
 
     def near_regex()
-      '[\t \n]* *(.*)\n[ \t]+\^'
+      '.*[\t \n]* *(.*)\n[ \t]+\^'
     end
 
     def explain_has_no_member_named(_, result)
@@ -69,6 +69,12 @@ class CppFeedbackHook < Mumukit::Hook
     def explain_call_of_overloaded_is_ambiguous(_, result)
       (/error: call of overloaded '(.*)' is ambiguous#{near_regex}/.match result).try do |it|
         {target: it[1], near: it[2]}
+      end
+    end
+
+    def explain_invalid_conversion_from_to(_, result)
+      (/error: invalid conversion from '(.*)' to '(.*)'#{near_regex}/.match result).try do |it|
+        {expected: it[1], actual: it[2], near: it[3]}
       end
     end
 
