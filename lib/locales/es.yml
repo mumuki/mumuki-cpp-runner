@@ -13,3 +13,4 @@ en:
   expected_after_struct_definition: 'Falta el `;` después de definir el registro.'
   expected_initializer_before: 'Probablemente falte un `;` después de declarar una variable en la línea anterior a `%{near}`.'
   expected_unqualified_id: 'El identificador que se encuentra entes que `%{token}` no es válido. Revisá en esta parte `%{near}`.'
+  expected_at_end_of_member: 'Parece que campo, atributo o método está mal definido. Revisá en esta parte `%{near}` si sobra o falta algún `%{token}`.'

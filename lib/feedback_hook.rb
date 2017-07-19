@@ -94,6 +94,12 @@ class CppFeedbackHook < Mumukit::Hook
       end
     end
 
+    def explain_expected_at_end_of_member(_, result)
+      (/#{error} expected '(.*)' at end of member declaration#{near_regex}/.match result).try do |it|
+        {token: it[1], near: it[2]}
+      end
+    end
+
     def explain_expected_unqualified_id(_, result)
       (/#{error} expected unqualified-id before '(.*)' token#{near_regex}/.match result).try do |it|
         {token: it[1], near: it[2]}

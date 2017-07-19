@@ -129,6 +129,17 @@ describe CppFeedbackHook do
     it {expect(feedback).to include('* El identificador que se encuentra entes que `=` no es válido. Revisá en esta parte `int double = 1;`.')}
   end
 
+  context 'expected_at_end_of_member' do
+    let(:request) {req(%q{
+      struct Foo {
+        double bar
+        double baz;
+      };
+    })}
+
+    it {expect(feedback).to include('* Parece que campo, atributo o método está mal definido. Revisá en esta parte `double bar` si sobra o falta algún `;`.')}
+  end
+
   context 'when same error occurs more than once  times in the same line' do
     let(:request) {req(%q{
       struct Foo;

@@ -13,7 +13,7 @@ class CppTestHook < Mumukit::Templates::FileHook
 
   def post_process_file(file, result, status)
     if result.include? '!!TEST FINISHED WITH COMPILATION ERROR!!'
-      [result, :errored]
+      [Mumukit::ContentType::Markdown.code(result), :errored]
     else
       super
     end
