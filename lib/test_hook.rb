@@ -53,8 +53,12 @@ EOF
       captures = it.split("\n")
       title = captures.first.split(' (F)').first
       result = [captures[1], captures[2], captures[3], captures[4], captures[5]].compact.join(' ').strip
-      [title, :failed, result]
+      [title, :failed, format_code(result)]
     end
+  end
+
+  def format_code(result)
+    Mumukit::ContentType::Markdown.code result
   end
 
 end

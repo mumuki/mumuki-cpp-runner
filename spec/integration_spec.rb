@@ -64,7 +64,7 @@ class Foo {
 };}, expectations: [])}
 
     it {expect(response).to eq response_type: :structured,
-                               test_results: [{title: 'testFoo', status: :failed, result: 'assertion failed - Expression: foo->foo() == 4'}],
+                               test_results: [{title: 'testFoo', status: :failed, result: Mumukit::ContentType::Markdown.code('assertion failed - Expression: foo->foo() == 4')}],
                                status: :failed,
                                feedback: '',
                                expectation_results: [],
