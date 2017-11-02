@@ -17,7 +17,7 @@ class CppFeedbackHook < Mumukit::Hook
     end
 
     def explain_has_no_member_named(_, result)
-      (/#{error} '(.*)' has no member named '(.*)'#{near_regex}/.match result).try do |it|
+      (/#{error} '(.*)' has no member named '(.*?)'#{near_regex}/.match result).try do |it|
         {type: it[1], target: it[2], near: it[3]}
       end
     end
@@ -41,8 +41,8 @@ class CppFeedbackHook < Mumukit::Hook
     end
 
     def explain_invalid_suffix(_, result)
-      (/#{error} invalid suffix "(.*)" on integer constant#{near_regex}/.match result).try do |it|
-        {suffix: it[1], near: it[2]}
+      (/#{error} expected unqualified-id before numeric constant#{near_regex}/.match result).try do |it|
+        {near: it[1]}
       end
     end
 

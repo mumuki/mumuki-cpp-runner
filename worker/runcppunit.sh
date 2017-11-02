@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 g++ -std=c++11 $1 -o test.out -lcppunit 2>&1
 if [ $? -ne 0 ] ; then

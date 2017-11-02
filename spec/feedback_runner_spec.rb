@@ -45,7 +45,7 @@ describe CppFeedbackHook do
   context 'invalid_suffix' do
     let(:request) {req('void 2foo() {}')}
 
-    it {expect(feedback).to include('* Parece que intentaste definir un identificador `foo` no válido. Revisá en esta parte `void 2foo() {}` si lo empezaste con un número. Recordá que los nombres de los identificadores deben comenzar con una **letra**, **$** o **_** (guión bajo).')}
+    it {expect(feedback).to include('* Parece que intentaste definir un identificador no válido. Revisá en esta parte `void 2foo() {}` si lo empezaste con un número. Recordá que los nombres de los identificadores deben comenzar con una **letra**, **$** o **_** (guión bajo).')}
   end
 
   context 'expected_comma_before_token' do

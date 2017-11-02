@@ -45,12 +45,12 @@ describe 'running' do
       it {expect(results[0][5]).to eq ['test07', :failed, format_code('double equality assertion failed - Expected: 1 - Actual  : 1.15 - Delta   : 0.14 - Deberia haber un delta de 0.15 aceptable')]}
       it {expect(results[0][6]).to eq ['test08', :failed, format_code('expected exception not thrown - Expected: CppUnit::Exception')]}
       it {expect(results[0][7]).to eq ['test09', :failed, format_code('expected exception not thrown - DEBERIA FALLAR - Expected: CppUnit::Exception')]}
-      it {expect(results[0][8]).to eq ['test10', :failed, format_code('unexpected exception caught - Caught: std::out_of_range - What(): vector::_M_range_check')]}
-      it {expect(results[0][9]).to eq ['test11', :failed, format_code('unexpected exception caught - DEBERIA FALLAR - Caught: std::out_of_range - What(): vector::_M_range_check')]}
+      it {expect(results[0][8]).to eq ['test10', :failed, format_code('unexpected exception caught - Caught: std::out_of_range - What(): vector::_M_range_check: __n (which is 50) >= this->size() (which is 0)')]}
+      it {expect(results[0][9]).to eq ['test11', :failed, format_code('unexpected exception caught - DEBERIA FALLAR - Caught: std::out_of_range - What(): vector::_M_range_check: __n (which is 50) >= this->size() (which is 0)')]}
       it {expect(results[0][10]).to eq ['test12', :failed, format_code('expected exception not thrown - Expected: CppUnit::Exception')]}
       it {expect(results[0][11]).to eq ['test13', :failed, format_code('expected exception not thrown - No deberían ser iguales - Expected: CppUnit::Exception')]}
-      it {expect(results[0][12]).to eq ['test14', :failed, format_code('unexpected exception caught - Caught: std::out_of_range - What(): vector::_M_range_check')]}
-      it {expect(results[0][13]).to eq ['test15', :failed, format_code('unexpected exception caught - DEBERIA FALLAR - Caught: std::out_of_range - What(): vector::_M_range_check')]}
+      it {expect(results[0][12]).to eq ['test14', :failed, format_code('unexpected exception caught - Caught: std::out_of_range - What(): vector::_M_range_check: __n (which is 50) >= this->size() (which is 0)')]}
+      it {expect(results[0][13]).to eq ['test15', :failed, format_code('unexpected exception caught - DEBERIA FALLAR - Caught: std::out_of_range - What(): vector::_M_range_check: __n (which is 50) >= this->size() (which is 0)')]}
     end
 
   end
