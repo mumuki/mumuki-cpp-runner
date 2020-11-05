@@ -1,4 +1,4 @@
-en:
+es:
   has_no_member_named: 'Parece que no existe el campo, atributo o método `%{target}` en `%{type}`. Revisá en esta parte `%{near}` que exista o el nombre esté bien escrito.'
   was_not_declared_in_this_scope: 'El identificador `%{target}` no existe. Revisá en esta parte `%{near}` si está bien escrito o si estás usando la variable correcta.'
   does_not_a_type: 'No hay un tipo de dato con el nombre `%{type}`. Revisá en esta parte `%{near}` si está bien escrito.'
